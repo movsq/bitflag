@@ -1,0 +1,31 @@
+# dependencies
+**/node_modules
+
+# build/output artifacts
+dist/
+build/
+**/dist/
+**/build/
+*.tsbuildinfo
+coverage/
+.vite/
+out/
+
+# logs
+*.log
+
+# temporary files
+*.tmp
+
+# environment files
+!.env.example
+.env
+.env.local
+.env.*.local
+
+# editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
