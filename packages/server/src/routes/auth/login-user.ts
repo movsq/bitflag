@@ -1,5 +1,5 @@
 import type { FastifyInstance, FastifyPluginOptions } from "fastify";
-import type { LoginBody, RegisterBody } from "@bitflag/shared";
+import type { LoginBody } from "@bitflag/shared/src/types/auth.js";
 import { eq } from "drizzle-orm";
 import { password } from "bun";
 import zod from "zod";
