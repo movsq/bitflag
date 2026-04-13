@@ -9,7 +9,7 @@
         "typescript": "^6.0.2"
     },
     "scripts": {
-        "dev:server": "bun packages/server/src/index.ts",
+        "dev:server": "bun --watch packages/server/src/index.ts",
         "dev:client": "bun run --cwd packages/client dev"
     }
 }
