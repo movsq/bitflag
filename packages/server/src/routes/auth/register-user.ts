@@ -16,16 +16,16 @@ async function AuthRoutes(
         fastify.post<{ Body: RegisterBody }>("/register", async(request, reply) => {
             const { reqEmail, reqPassword } = request.body;
 
-            const is_email_valid:boolean = reqEmail != undefined && zod.email().safeParse(reqEmail).success;
-            const is_password_valid:boolean = reqPassword != undefined && zod.string().min(8).max(255).safeParse(reqPassword).success;
+            const isEmailValid:boolean = reqEmail != undefined && zod.email().safeParse(reqEmail).success;
+            const isPasswordValid:boolean = reqPassword != undefined && zod.string().min(8).max(255).safeParse(reqPassword).success;
 
             const validationErrors:string[] = [];
 
-            if (!is_email_valid) {
+            if (!isEmailValid) {
                 validationErrors.push("Invalid e-mail");
             }
 
-            if (!is_password_valid) {
+            if (!isPasswordValid) {
                 validationErrors.push("Password must be between 8 and 255 characters");
             }
 
@@ -45,7 +45,7 @@ async function AuthRoutes(
             const newUser : NewUser = {email : reqEmail, passwordHash : hashedPassword};
             await db.insert(users).values(newUser);
             
-            return reply.status(200).send("Success");
+            return reply.status(200).send("Reguster success");
 
         })
 }
