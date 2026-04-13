@@ -1,5 +1,5 @@
 import Fastify from 'fastify';
-import registerUser from './register-user.js'
+import registerUser from './routes/auth/register-user.js'
 
 const fastify = Fastify({
     logger: true

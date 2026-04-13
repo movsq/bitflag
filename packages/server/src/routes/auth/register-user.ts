@@ -4,8 +4,8 @@ import { eq } from "drizzle-orm";
 import { password } from "bun";
 import zod from "zod";
 
-import db from "./db/index.js";
-import { users } from "./db/schema.js";
+import db from "../../db/index.js";
+import { users } from "../../db/schema.js";
 
 type NewUser = typeof users.$inferInsert;
 
