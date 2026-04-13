@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123aaa
-      POSTGRES_DB: bitflag
+      POSTGRES_DB: bitflag_db
     ports:
       - "5432:5432"
     volumes:
