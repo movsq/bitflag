@@ -8,7 +8,7 @@
 |-------|--------|
 | Runtime | Bun |
 | HTTP | Fastify |
-| Real-time | Socket.io |
+| Real-time | @fastify/websocket |
 | Database | PostgreSQL + Drizzle ORM |
 | Frontend | React + Vite |
 | Language | TypeScript throughout |
@@ -19,7 +19,7 @@
 bitflag/
 ├── packages/
 │   ├── client/     # React + Vite
-│   ├── server/     # Bun + Fastify + Socket.io
+│   ├── server/     # Bun + Fastify + @fastify/websocket
 │   └── shared/     # Shared types & constants
 ├── docker-compose.yml
 └── package.json
